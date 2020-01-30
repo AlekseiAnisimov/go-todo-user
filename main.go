@@ -25,13 +25,14 @@ type Env struct {
 var dbConfigFile = "dbconfig.yml"
 
 type User struct {
-	Id int
-	Fam string
-	Name string
-	Otch string
-	Birthday string
-	Description string
-	Avatar string
+	Id int `db:"id"`
+	AuthId `db:"auth_id"`
+	Fam string `db:"fam"`
+	Name string	`db:"name"`
+	Otch string `db:"otch"`
+	Birthday string `db:"birthday"`
+	Description string `db:"description"`
+	Avatar string `db:"avatar"`
 }
 
 func main() {
